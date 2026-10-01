@@ -1,0 +1,19 @@
+{
+  "slug": "your-slug",
+  "title": "Title",
+  "summary": "One sentence on what it makes.",
+  "category": "Web design",
+  "author": "Your name",
+  "license": "MIT",
+  "published": "2026-01-01",
+  "tools": ["Tool name"],
+  "requirements": ["What someone needs before starting"],
+  "steps": ["First step", "Second step"],
+  "distinctive": "What makes the result different.",
+  "limitations": "Known limits and failures.",
+  "proof_note": "How the result was made, and what was done by hand.",
+  "preview": "/media/skills/your-slug.jpg",
+  "demo": "https://example.com/result",
+  "reviewed": false,
+  "rights_confirmed": false
+}
