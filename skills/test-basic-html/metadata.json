@@ -15,6 +15,6 @@
   "proof_note": "Codex authored the skill and example from the stated input. The preview is a Chromium screenshot of the committed example, checked for one h1 and one paragraph. No external model comparison or originality assessment was performed.",
   "preview": "/media/skills/test-basic-html.jpg",
   "demo": "https://github.com/avixityyt/beyondordinary-skills/blob/e2cd1b6c12cdf727da95796f5eeb1c54701fbafb/skills/test-basic-html/example.html",
-  "reviewed": false,
-  "rights_confirmed": false
+  "reviewed": true,
+  "rights_confirmed": true
 }
