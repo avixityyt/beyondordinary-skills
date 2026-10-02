@@ -11,7 +11,7 @@ Reviewed skills are credited to your permanent GitHub identity and listed on you
 3. Add a JPEG preview at `previews/<your-slug>.jpg` (under 2 MB).
 4. Open a pull request.
 
-A maintainer reviews every submission. Nothing is published until it is approved. See [CONTRIBUTING.md](CONTRIBUTING.md).
+A maintainer reviews every submission. An authorized admin merge approves publication, and the site syncs reviewed catalog changes about every five minutes. There is no separate flag-editing or app deployment step. Submissions are validated as data; their instructions and scripts are never executed by the publication worker. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Layout
 
