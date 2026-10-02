@@ -2,6 +2,8 @@
 
 Creative AI skills for [beyondordinary.art](https://beyondordinary.art).
 
+Reviewed skills are credited to your permanent GitHub identity and listed on your creator profile. Site sign-in is optional; it lets you edit a public display name and bio. See the creator metadata instructions in [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Submit
 
 1. Fork this repository.

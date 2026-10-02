@@ -6,6 +6,11 @@ for file in (root/'skills').glob('*/metadata.json'):
         if file.is_symlink() or file.stat().st_size>50000: raise ValueError('metadata must be a bounded regular file')
         item=json.loads(file.read_text(encoding='utf-8-sig'))
         slug=item['slug']
+        creator=item.get('creator')
+        if not isinstance(creator,dict) or set(creator)!={'github_id','github_login','name'}: raise ValueError('include creator identity')
+        if not isinstance(creator['github_id'],str) or not re.fullmatch(r'[1-9][0-9]{0,19}',creator['github_id']): raise ValueError('creator github_id must be a numeric ID string')
+        if not isinstance(creator['github_login'],str) or not re.fullmatch(r'[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?',creator['github_login']): raise ValueError('invalid creator github_login')
+        if not isinstance(creator['name'],str) or not 1<=len(creator['name'].strip())<=100: raise ValueError('invalid creator name')
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',slug) or slug!=file.parent.name: raise ValueError('invalid slug')
         for key in ['title','summary','author','license','distinctive','limitations','proof_note','published']:
             if not isinstance(item.get(key),str) or not item[key].strip() or len(item[key])>1000: raise ValueError('missing or oversized text: '+key)

@@ -4,6 +4,7 @@
   "summary": "One sentence on what it makes.",
   "category": "Web design",
   "author": "Your name",
+  "creator": {"github_id": "YOUR_NUMERIC_ID", "github_login": "your-github-name", "name": "Your name"},
   "license": "MIT",
   "published": "2026-01-01",
   "tools": ["Tool name"],
