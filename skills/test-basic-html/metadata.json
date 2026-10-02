@@ -1,0 +1,20 @@
+{
+  "slug": "test-basic-html",
+  "title": "Basic HTML test",
+  "summary": "A plain title and paragraph to test the submission workflow.",
+  "category": "Web design",
+  "author": "Dzintars IT",
+  "creator": {"github_id": "74422918", "github_login": "avixityyt", "name": "Dzintars IT"},
+  "license": "MIT",
+  "published": "2026-10-02",
+  "tools": ["A text-based AI assistant", "A web browser"],
+  "requirements": ["A title and one sentence in English", "A browser to open the generated HTML"],
+  "steps": ["Give the assistant SKILL.md, the title Hello world, and the sentence This is my first test skill.", "Save the returned HTML as example.html.", "Open example.html in a browser; it should contain one heading and one paragraph."],
+  "distinctive": "An owner-requested workflow test using browser defaults. It is intentionally basic and does not claim a unique visual style.",
+  "limitations": "This tests submission mechanics, not creative quality. It has no styling or interactivity. AI assistants may produce different markup.",
+  "proof_note": "Codex authored the skill and example from the stated input. The preview is a Chromium screenshot of the committed example, checked for one h1 and one paragraph. No external model comparison or originality assessment was performed.",
+  "preview": "/media/skills/test-basic-html.jpg",
+  "demo": "https://github.com/avixityyt/beyondordinary-skills/blob/e2cd1b6c12cdf727da95796f5eeb1c54701fbafb/skills/test-basic-html/example.html",
+  "reviewed": false,
+  "rights_confirmed": false
+}
