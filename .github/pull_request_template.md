@@ -1,4 +1,5 @@
 <!-- Fill in the prompts and check the boxes you can confirm. Keep private data out of this public PR. For an update, explain what changed and show fresh proof. For a withdrawal, explain the removal and omit sections that do not apply. -->
+<!-- Maintainers: inspect the submission review summary in the Actions check before approving. Account age and duplicate signals require judgment; they are not proof of abuse. -->
 
 ## Submission
 

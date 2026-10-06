@@ -19,6 +19,16 @@ Leave `reviewed` and `rights_confirmed` as `false`. An authorized maintainer rev
 
 The structure checks reject missing files, invalid dates, oversized fields, broken JPEG previews, and new creator credit that does not match the pull request author. They do not run the skill or prove rights, safety or creative quality. Existing skills can be improved without claiming their creator identity.
 
+## Submission protections
+
+External contributors may have at most two open PRs at once. GitHub requires maintainer approval before running workflows from external contributors. Updating a PR cancels its older check run.
+
+Contributor PRs may change files inside `skills/<slug>/` and JPEGs in `previews/`. Tooling, workflows and documentation need a separate owner-reviewed change. Keep each changed file under 2,000,000 bytes, the total changed files under 5,000,000 bytes, and each PR to at most 60 changed files. Link larger result files instead of uploading them here.
+
+The check summary flags accounts under seven days old, automated accounts, four or more PRs in a day, and matching instruction bodies under different slugs. These are review signals, not automatic bans or rejection decisions. Activity checks inspect the most recent 100 PRs and say when that limit is reached. A maintainer still checks proof, permissions and creator credit. No automated comments or messages are sent.
+
+Website account details can be saved privately before contributing. Public creator pages and avatars require at least one visible published skill. If all of a creator's entries are hidden or withdrawn, their public page becomes unavailable until another entry is published.
+
 By submitting, you give Beyond Ordinary limited permission to display your entry, as set out in the [Terms](https://beyondordinary.art/terms). You keep ownership.
 
 Withdrawals and reports: legal@beyondordinary.art. Do not post private complaints in public issues.

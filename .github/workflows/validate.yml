@@ -1,7 +1,15 @@
 name: Validate skill metadata
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
 permissions:
   contents: read
+  pull-requests: read
+concurrency:
+  group: submission-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -16,7 +24,26 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha || github.sha }}
           persist-credentials: false
           path: trusted
+      - name: Check submission boundaries and review signals
+        if: github.event_name == 'pull_request'
+        env:
+          PR_AUTHOR_ID: ${{ github.event.pull_request.user.id }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if test -f trusted/tools/review_submission.py; then
+            python3 trusted/tools/review_submission.py submission trusted
+          elif test "$PR_AUTHOR_ID" = "74422918"; then
+            echo "Owner-only bootstrap: review tooling is being added to the trusted base."
+          else
+            echo "::error::Trusted review tooling is unavailable; maintainer setup is required."
+            exit 1
+          fi
       - name: Validate data only with maintainer tooling
         env:
           PR_AUTHOR_ID: ${{ github.event.pull_request.user.id || '' }}
         run: python3 trusted/tools/validate.py submission trusted
+      - name: Test trusted review tooling
+        run: |
+          if test -f trusted/tools/test_review_submission.py; then
+            python3 -m unittest discover -s trusted/tools -p 'test_*.py'
+          fi
