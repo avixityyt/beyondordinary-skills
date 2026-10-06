@@ -1,5 +1,7 @@
 # Contributing
 
+Start with the [submission template](template/README.md). It includes the skill instructions, website metadata, a license starting point and a guide to the required preview. The pull request description has a separate checklist that GitHub fills in when you open the PR.
+
 Include:
 
 - Complete instructions in `SKILL.md`, with tools, versions and inputs.
